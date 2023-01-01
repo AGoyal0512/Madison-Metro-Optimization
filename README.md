@@ -4,11 +4,9 @@ Optimization techniques are a brilliant way of modelling various real-life scena
 
 Madison Metro Transit plans to redesign its bus system by August 2023. They're looking to increase access and bus frequency and decrease travel times to better meet the needs of Madison-area residents and businesses, while also being cost effective as per the proposed budget for the project.
 
-Metro Transit transportation planner Mike Cechvala emphasizes on the need for this change as there hasn't been any significant remodeling of the system in the last two decades. He outlines some major problems in the Metro system which need to be solved. Some of these include cutting down on overlapping routes and replacing them with ones that serve the city more efficiently. Decreasing travel time will reduce vehicle miles and encourage a shift from cars to buses, which would also be in the interest of the environment.
-
 It has also been seen that the ridership has slowly declined for the last six years, with an even greater impact seen in the last couple of years due to COVID-19. We believe that a more efficient system will increase ridership and will allow Metro Transit to live up to its classification as a high-performing system, similar to bus systems in larger cities like Chicago and New York.
 
-[Image of Madison Metro Bus Service](./images/madison-metro.png)
+![Image of Madison Metro Bus Service](./images/madison-metro.png)
 
 
 ## Model
@@ -30,10 +28,19 @@ $\sum_i x_i$ is the total flow of the network (i.e. the combination of all $i$ u
 
 ## Respository Structure
 
+This repository has the following directories:
+- `./images`: Contains the images used for the project report as well as output images generated
+- `./data`: Contains the datasets downloaded from the [City of Madison Data Hub](https://data-cityofmadison.opendata.arcgis.com/)
 
-
+The main linear minimum-cost network flow model used by us is in `model.ipynb`, and it is used by `ProjectReport.ipynb` which is also our final deliverable for the project containing the final report.
 
 ## Results
 
+Here are some sample results:
+
+![Optimized Flow](./images/big_route.png)
+
+which we further superimposed on the Map of Madison (GoogleMaps API):
 
 
+![Optimized Flow](./images/V1.3.png)
