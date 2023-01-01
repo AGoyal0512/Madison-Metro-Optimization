@@ -8,33 +8,18 @@ Metro Transit transportation planner Mike Cechvala emphasizes on the need for th
 
 It has also been seen that the ridership has slowly declined for the last six years, with an even greater impact seen in the last couple of years due to COVID-19. We believe that a more efficient system will increase ridership and will allow Metro Transit to live up to its classification as a high-performing system, similar to bus systems in larger cities like Chicago and New York.
 
-[Image of Madison Metro Bus Service](https://madisoncommons.org/wp-content/uploads/2020/09/August-2020-Weekday-Service-Map.jpg)
+[Image of Madison Metro Bus Service](./images/madison-metro.png)
 
 
 ## Model
 
-$$
-\newcommand{\QQ}{\mathbb{Q}}
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\NN}{\mathbb{N}}
-\newcommand{\ZZ}{\mathbb{Z}}
-\newcommand{\PP}{\mathbb{P}}
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\N}{\mathcal{N}}
-\newcommand{\T}{\mathsf{T}}
-\newcommand{\lp}{\left(}
-\newcommand{\rp}{\right)}
-\newcommand{\lb}{\left[}
-\newcommand{\rb}{\right]}
-\newcommand{\bm}[1]{\boldsymbol{#1}}
-\begin{align*}
-\underset{x_i \in \mathbb{R^n}}{\text{minimize}}\qquad& c^\T \sum_i x_i \\
+We model this problem using a **minimum-cost network flow problem** which is a very simple, linear formulation to optimize the bus transit routes.
+
+$$\begin{align*}
+\underset{x_i \in \mathbb{R^n}}{\text{minimize}}\qquad& c^\mathsf{T} \sum_i x_i \\
 \text{subject to:}
 \qquad& \forall i, Ax_i = b_i
-\end{align*}
-$$
+\end{align*}$$
 
 Where:  
 $A$ is the Incidence matrix of the fully connected network of intersections  
@@ -42,3 +27,13 @@ $x_i$ is the flow that satisfies the $i^\text{th}$ pair of conencted stops
 $b_i$ is the required movement between the $i^\text{th}$ pair of conencted stops  
 $c_j$ is the vector costs of movement between all pairs of nodes  
 $\sum_i x_i$ is the total flow of the network (i.e. the combination of all $i$ unique types of flow)
+
+## Respository Structure
+
+
+
+
+## Results
+
+
+
